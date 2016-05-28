@@ -1,0 +1,28 @@
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class=no-js><!--<![endif]--><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>Hadi Michael</title><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=theme-color content=#fafafa><style>body {
+        padding: 10px;
+        color: #333;
+        background: #fafafa;
+        font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }</style><!-- I want to redirect you as soon as possible, but I also want to track analytics! --><script src=//www.google-analytics.com/analytics.js></script><!-- Custom URL Shortener --><script>ga('create','UA-50282790-1');
+
+      //Custom url shortener
+      (function() {
+        'use strict';
+
+        var shortUrls = {
+          'twitter': 'http://twitter.com/hadi_michael',
+          'github': 'http://github.com/hadimichael'
+        },
+        destination = shortUrls[document.location.pathname.substring(1)];
+
+        if (!!destination) { 
+          document.write('Hang tight... I\'m redirecting you to <a href="' + destination + '">' + destination + '</a>'); //eww!!! document.write() is yucky!
+          ga('send', 'event', '404', 'redirect', destination);
+          window.location = destination; 
+        } else {
+          ga('send', 'pageview', {
+            page: '/404.html',
+            title: '404 Not Found'
+          });
+        }
+      }());</script><!-- Link to font --><link href="//fonts.googleapis.com/css?family=Raleway:300" rel=stylesheet type=text/css><body><noscript><p>Do you actually have JavaScript disabled? Why would you do that?! Anyway, the page you were trying to visit may exist, but I don't have a proper server here and I can't redirect you to it - sorry.<hr></noscript><h1>404 - Not Found</h1><h2>Whoops! I couldn't find the page you were looking for. Sorry :(</h2><p>This may be the result of a mistyped address or an out-of-date link.<p>You can start again at <a href=http://hadi.io onclick="ga('send', 'event', 'button', 'click', 'hadi.io');">hadi.io</a>
