@@ -4,7 +4,6 @@ const path = require('path');
 
 //gulp modules
 const gulp = require('gulp');
-const gutil = require('gulp-util');
 const revReplace = require('gulp-rev-replace');
 
 //project files
