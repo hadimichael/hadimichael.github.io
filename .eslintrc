@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb-base", //Styleguide here: https://github.com/airbnb/javascript
+  "rules": {
+    "indent": [
+      2,
+      "tab"
+    ],
+    "spaced-comment": [
+      2,
+      "never"
+    ],
+    "arrow-body-style": [
+      2,
+      "always"
+    ]
+  },
+  "env": {
+    "node": true
+  }
+}

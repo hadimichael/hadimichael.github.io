@@ -1,0 +1,30 @@
+{
+  "name": "hadimichael.github.io",
+  "version": "2.0.0",
+  "description": "Landing page for Hadi Michael",
+  "homepage": "https://hadi.io",
+  "author": "Hadi Michael <hadimichael@gmail.com> (https://hadi.io)",
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hadimichael/hadimichael.github.io.git"
+  },
+  "engines": {
+    "node": ">=5.10.1"
+  },
+  "scripts": {
+    "start": "echo \"working on it...\"",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "eslint": "^2.11.0",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "gh-pages": "^0.11.0",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7"
+  }
+}
