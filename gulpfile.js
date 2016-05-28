@@ -17,7 +17,7 @@ gulp.task('build', ['clean'], () => {
 
 gulp.task('deploy', ['build'], () => {
 	return ghpages.publish(conf.paths.dist, {
-		message: `Deployed update at ${new Date()}`,
+		message: `Build and deploy on ${new Date()}`,
 		branch: 'master',
 		push: false,
 		logger: (message) => {
