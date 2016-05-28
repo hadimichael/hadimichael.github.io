@@ -19,11 +19,14 @@ gulp.task('deploy', ['build'], () => {
 	return ghpages.publish(conf.paths.dist, {
 		message: `Deployed update at ${new Date()}`,
 		branch: 'master',
+		push: false,
 		logger: (message) => {
 			gutil.log(gutil.colors.blue('[deploy]'), message);
 		},
 	}, (err) => {
-		gutil.log(gutil.colors.red('[deploy] Error deploying'), err);
+		if (!!err) {
+			gutil.log(gutil.colors.red('[deploy] Error deploying'), err);
+		}
 	});
 });
 
