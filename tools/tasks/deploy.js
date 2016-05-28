@@ -4,7 +4,7 @@ const gutil = require('gulp-util');
 
 const config = require('./../config');
 
-gulp.task('_deploy', ['dist'], () => {
+gulp.task('deploy', ['dist'], () => {
 	return ghpages.publish(config.paths.dist, {
 		message: `Build and deploy on ${new Date()}`,
 		branch: 'master',
