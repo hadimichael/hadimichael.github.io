@@ -10,7 +10,7 @@ const csscomb = require('gulp-csscomb');
 
 const config = require('./../config');
 
-const files = path.join(config.paths.source, '**/*.scss');
+const files = path.join(config.paths.source, '**/*.{scss,css}');
 const autoprefixerOptions = {
 	browsers: ['> 1%', 'IE 7'],
 };
