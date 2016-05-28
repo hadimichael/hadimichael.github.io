@@ -21,16 +21,19 @@ gulp.task('serve', [
 	'_images',
 	'_styles',
 	'_html',
+	'_assets',
 	'_server',
 	'_images:watch',
 	'_styles:watch',
 	'_html:watch',
+	'_assets:watch',
 ]);
 
 gulp.task('dist', [
-	'_clean',
+	'_clean:dist',
 	'_rev',
 	'_html:dist',
+	'_assets:dist',
 ], () => {
 	const manifest = gulp.src(path.join(config.paths.tmp, 'rev-manifest.json'));
 
