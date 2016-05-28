@@ -16,6 +16,8 @@ fs.readdirSync(config.paths.tasks).map((fileName) => {
 });
 
 //primary tasks
+gulp.task('clean', ['_clean:tmp', '_clean:build', '_clean:dist']);
+
 gulp.task('serve', [
 	'_clean:build',
 	'_images',

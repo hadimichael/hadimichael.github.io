@@ -14,5 +14,3 @@ gulp.task('_clean:build', () => {
 gulp.task('_clean:dist', () => {
 	return del.sync(config.paths.dist);
 });
-
-gulp.task('_clean', ['_clean:tmp', '_clean:build', '_clean:dist']);
