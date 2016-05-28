@@ -1,35 +1,42 @@
-const path = require('path'); //https://nodejs.org/api/path.html
-const gulp = require('gulp'); //https://github.com/gulpjs/gulp
-const gutil = require('gulp-util'); //https://github.com/gulpjs/gulp-util
-const del = require('del'); //https://github.com/sindresorhus/del
-const ghpages = require('gh-pages'); //https://github.com/tschaub/gh-pages
+//node modules
+const fs = require('fs');
+const path = require('path');
 
-const conf = require('./tools/conf');
+//gulp modules
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const revReplace = require('gulp-rev-replace');
 
-gulp.task('clean', () => {
-	return del([conf.paths.dist]);
+//project files
+const config = require('./tools/config');
+
+//load all our utility gulp tasks
+fs.readdirSync(config.paths.tasks).map((fileName) => {
+	return require(path.join(config.paths.tasks, fileName)); //eslint-disable-line global-require
 });
 
-gulp.task('build', ['clean'], () => {
-	return gulp.src(path.join(conf.paths.source, '/**/*'))
-		.pipe(gulp.dest(conf.paths.dist));
+//primary tasks
+gulp.task('serve', [
+	'_clean:build',
+	'_images',
+	'_styles',
+	'_html',
+	'_server',
+	'_images:watch',
+	'_styles:watch',
+	'_html:watch',
+]);
+
+gulp.task('dist', [
+	'_clean',
+	'_rev',
+	'_html:dist',
+], () => {
+	const manifest = gulp.src(path.join(config.paths.tmp, 'rev-manifest.json'));
+
+	return gulp.src(path.join(config.paths.dist, '/index.html'))
+		.pipe(revReplace({ manifest }))
+		.pipe(gulp.dest(config.paths.dist));
 });
 
-gulp.task('deploy', ['build'], () => {
-	return ghpages.publish(conf.paths.dist, {
-		message: `Build and deploy on ${new Date()}`,
-		branch: 'master',
-		push: false,
-		logger: (message) => {
-			gutil.log(gutil.colors.blue('[deploy]'), message);
-		},
-	}, (err) => {
-		if (!!err) {
-			gutil.log(gutil.colors.red('[deploy] Error deploying'), err);
-		}
-	});
-});
-
-gulp.task('default', () => {
-	gutil.log(gutil.colors.yellow('[gulp]'), 'No default gulp task');
-});
+gulp.task('default', ['serve']);
