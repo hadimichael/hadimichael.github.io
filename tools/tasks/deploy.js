@@ -8,7 +8,6 @@ gulp.task('deploy', ['dist'], () => {
 	return ghpages.publish(config.paths.dist, {
 		message: `Build and deploy on ${new Date()}`,
 		branch: 'master',
-		push: false,
 		logger: (message) => {
 			gutil.log(gutil.colors.blue('[deploy]'), message);
 		},
