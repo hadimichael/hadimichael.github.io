@@ -5,7 +5,6 @@ const del = require('del'); //https://github.com/sindresorhus/del
 const ghpages = require('gh-pages'); //https://github.com/tschaub/gh-pages
 
 const conf = require('./tools/conf');
-const packageDotJson = require('./package.json');
 
 gulp.task('clean', () => {
 	return del([conf.paths.dist]);
@@ -20,7 +19,6 @@ gulp.task('deploy', ['build'], () => {
 	return ghpages.publish(conf.paths.dist, {
 		message: `Deployed update at ${new Date()}`,
 		branch: 'master',
-		repo: packageDotJson.repository.url,
 		logger: (message) => {
 			gutil.log(gutil.colors.blue('[deploy]'), message);
 		},
