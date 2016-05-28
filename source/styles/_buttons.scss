@@ -1,0 +1,61 @@
+/* =========================================== *\
+ * Button styling
+\* =========================================== */
+
+.btn {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 10px 16px;
+	padding-left: 36px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 6px;
+	text-decoration: none;
+	cursor: pointer;
+	vertical-align: middle;
+
+	user-select: none;
+	transition: background-color 250ms, color 250ms, border-color 250ms;
+	white-space: nowrap;
+	touch-action: manipulation;
+	@include font-size(18, 20);
+
+	&:focus,
+	&:active:focus,
+	&.active:focus,
+	&.focus,
+	&:active.focus,
+	&.active.focus {
+		outline: thin dotted;
+		outline: 5px auto -webkit-focus-ring-color;
+		outline-offset: -2px;
+	}
+
+	&:active,
+	&.active {
+		outline: 0;
+		-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+		        box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+	}
+
+	.lt-ie8 & {
+		padding-left: 10px;
+	}
+}
+
+.btn-twitter,
+.btn-instagram,
+.btn-blog,
+.btn-linkedin,
+.btn-github,
+.btn-stackoverflow {
+	@include peicon-dual(16px, 16px, 10px, center, true);
+
+	.lt-ie8 & {
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+}
