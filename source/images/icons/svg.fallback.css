@@ -1,0 +1,36 @@
+.btn-blog:after,
+.icon-blog-white { background-image: url('/images/icons/png/blog-white.png'); background-repeat: no-repeat; }
+
+.btn-blog:before,
+.icon-blog-wordpress { background-image: url('/images/icons/png/blog-wordpress.png'); background-repeat: no-repeat; }
+
+.btn-github:before,
+.icon-github-github { background-image: url('/images/icons/png/github-github.png'); background-repeat: no-repeat; }
+
+.btn-github:after,
+.icon-github-white { background-image: url('/images/icons/png/github-white.png'); background-repeat: no-repeat; }
+
+.btn-instagram:before,
+.icon-instagram-instagram { background-image: url('/images/icons/png/instagram-instagram.png'); background-repeat: no-repeat; }
+
+.btn-instagram:after,
+.icon-instagram-white { background-image: url('/images/icons/png/instagram-white.png'); background-repeat: no-repeat; }
+
+.btn-linkedin:before,
+.icon-linkedin-linkedin { background-image: url('/images/icons/png/linkedin-linkedin.png'); background-repeat: no-repeat; }
+
+.btn-linkedin:after,
+.icon-linkedin-white { background-image: url('/images/icons/png/linkedin-white.png'); background-repeat: no-repeat; }
+
+.btn-stackoverflow:before,
+.icon-stackoverflow-stackoverflow { background-image: url('/images/icons/png/stackoverflow-stackoverflow.png'); background-repeat: no-repeat; }
+
+.btn-stackoverflow:after,
+.icon-stackoverflow-white { background-image: url('/images/icons/png/stackoverflow-white.png'); background-repeat: no-repeat; }
+
+.btn-twitter:before,
+.icon-twitter-twitter { background-image: url('/images/icons/png/twitter-twitter.png'); background-repeat: no-repeat; }
+
+.btn-twitter:after,
+.icon-twitter-white { background-image: url('/images/icons/png/twitter-white.png'); background-repeat: no-repeat; }
+

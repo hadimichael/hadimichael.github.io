@@ -38,7 +38,7 @@ gulp.task('dist', [
 ], () => {
 	const manifest = gulp.src(path.join(config.paths.tmp, 'rev-manifest.json'));
 
-	return gulp.src(path.join(config.paths.dist, '/index.html'))
+	return gulp.src(path.join(config.paths.dist, '**/*'))
 		.pipe(revReplace({ manifest }))
 		.pipe(gulp.dest(config.paths.dist));
 });
