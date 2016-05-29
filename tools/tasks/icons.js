@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const gulp = require('gulp');
 const svgmin = require('gulp-svgmin');
@@ -13,17 +15,27 @@ const iconSelectors = path.join(config.paths.tools, '/selectors.config.js');
 const customSelectors = require(iconSelectors);
 const pngPath = '/images/icons/png';
 
-const iconPaths = {
-	src: path.join(config.paths.source, 'images/icons/*.svg'),
-	min: path.join(config.paths.tmp, '_svg-min'),
-	colorfy: path.join(config.paths.tmp, '_svg-colorfy'),
-	png: path.join(config.paths.tmp, pngPath),
-	destSvg: path.join(config.paths.tmp, 'styles/icons.data.svg.css'),
-	destPng: path.join(config.paths.tmp, 'styles/icons.data.png.css'),
-	destFallback: path.join(config.paths.tmp, 'styles/icons.fallback.css'),
-};
+function generateIconPaths(root) {
+	const iconPathsRoot = root || config.paths.build;
+	return {
+		src: path.join(config.paths.source, 'images/icons/*.svg'),
+		min: path.join(config.paths.tmp, '_svg-min'),
+		colorfy: path.join(config.paths.tmp, '_svg-colorfy'),
+		png: path.join(iconPathsRoot, pngPath),
+		destSvg: path.join(iconPathsRoot, 'styles/icons.data.svg.css'),
+		destPng: path.join(iconPathsRoot, 'styles/icons.data.png.css'),
+		destFallback: path.join(iconPathsRoot, 'styles/icons.fallback.css'),
+	};
+}
 
-gulp.task('_icons:dist', (done) => {
+let iconPaths = generateIconPaths();
+
+gulp.task('_icons:dist', () => {
+	iconPaths = generateIconPaths(config.paths.tmp);
+	gulp.start('_icons');
+});
+
+gulp.task('_icons', (done) => {
 	gulp.src(iconPaths.src)
 		.pipe(svgmin())
 		.pipe(gulp.dest(iconPaths.min))
