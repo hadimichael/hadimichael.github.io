@@ -8,6 +8,7 @@ const DirectoryEncoder = require('directory-encoder');
 const imagemin = require('gulp-imagemin');
 const raster = require('gulp-raster');
 const rename = require('gulp-rename');
+const runSequence = require('run-sequence');
 
 const config = require('./../config');
 
@@ -30,9 +31,9 @@ function generateIconPaths(root) {
 
 let iconPaths = generateIconPaths();
 
-gulp.task('_icons:dist', () => {
+gulp.task('_icons:dist', (callback) => {
 	iconPaths = generateIconPaths(config.paths.tmp);
-	gulp.start('_icons');
+	runSequence('_icons', callback);
 });
 
 gulp.task('_icons', (done) => {
