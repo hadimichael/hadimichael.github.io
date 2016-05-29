@@ -5,6 +5,7 @@ const path = require('path');
 //gulp modules
 const gulp = require('gulp');
 const revReplace = require('gulp-rev-replace');
+const runSequence = require('run-sequence');
 
 //project files
 const config = require('./tools/config');
@@ -30,12 +31,18 @@ gulp.task('serve', [
 	'_assets:watch',
 ]);
 
-gulp.task('dist', [
-	'_clean:dist',
-	'_rev',
-	'_html:dist',
-	'_assets:dist',
-], () => {
+gulp.task('dist', ['clean']);
+
+gulp.task('build:dist', (callback) => {
+	runSequence(
+		'clean',
+		['_icons:dist', '_images:dist', '_styles:dist'],
+		'_rev',
+		['_html:dist', '_assets:dist'],
+		callback);
+});
+
+gulp.task('dist', ['build:dist'], () => {
 	const manifest = gulp.src(path.join(config.paths.tmp, 'rev-manifest.json'));
 
 	return gulp.src(path.join(config.paths.dist, '**/*'))

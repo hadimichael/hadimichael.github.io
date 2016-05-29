@@ -3,7 +3,7 @@ const path = require('path');
 //Project paths
 exports.paths = {
 	root: path.join(__dirname, '../'),
-	config: path.join(__dirname),
+	tools: path.join(__dirname),
 	tasks: path.join(__dirname, './tasks'),
 	assets: path.join(__dirname, '../assets'),
 	source: path.join(__dirname, '../source'),
