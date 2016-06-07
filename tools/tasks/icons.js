@@ -1,7 +1,9 @@
-'use strict';
+'use strict'; //needed to use let
 
-const path = require('path');
 const gulp = require('gulp');
+const path = require('path');
+const fs = require('fs');
+const gutil = require('gulp-util');
 const svgmin = require('gulp-svgmin');
 const DirectoryColorfy = require('directory-colorfy');
 const DirectoryEncoder = require('directory-encoder');
@@ -41,59 +43,66 @@ gulp.task('_icons', (done) => {
 		.pipe(svgmin())
 		.pipe(gulp.dest(iconPaths.min))
 		.on('finish', () => { //I wish we didn't have to do this and could keep piping...
-			//colorfy - https://github.com/filamentgroup/directory-colorfy
-			const dc = new DirectoryColorfy(iconPaths.min, iconPaths.colorfy,
-				{
-					dynamicColorOnly: true,
-					colors: {
-						white: '#ffffff',
-						twitter: '#46c0fb',
-						instagram: '#3f729b',
-						wordpress: '#464646',
-						linkedin: '#0083a8',
-						github: '#171515',
-						stackoverflow: '#f18436',
-					},
-				}
-			);
+			fs.access(iconPaths.min, fs.F_OK, (err) => { //make sure the directory exists
+				if (!err) {
+					//colorfy - https://github.com/filamentgroup/directory-colorfy
+					const dc = new DirectoryColorfy(iconPaths.min, iconPaths.colorfy,
+						{
+							dynamicColorOnly: true,
+							colors: {
+								white: '#ffffff',
+								twitter: '#46c0fb',
+								instagram: '#3f729b',
+								wordpress: '#464646',
+								linkedin: '#0083a8',
+								github: '#171515',
+								stackoverflow: '#f18436',
+							},
+						}
+					);
 
-			dc.convert().then(() => {
-				//encode - https://github.com/filamentgroup/directory-encoder
+					dc.convert().then(() => {
+						//encode - https://github.com/filamentgroup/directory-encoder
 
-				const deOptions = {
-					customselectors: customSelectors,
-					prefix: '.icon-',
-					templatePrepend: `/* AUTO-GENERATED on ${new Date()}*/\n/* Source at tools/icons */\n\n`,
-					template: path.join(config.paths.tools, 'svgs.css.hbs'),
-				};
+						const deOptions = {
+							customselectors: customSelectors,
+							prefix: '.icon-',
+							templatePrepend: `/* AUTO-GENERATED on ${new Date()}*/\n/* Source at tools/icons */\n\n`,
+							template: path.join(config.paths.tools, 'svgs.css.hbs'),
+						};
 
-				//Generate svg-data stylesheet
-				const deSvg = new DirectoryEncoder(iconPaths.colorfy, iconPaths.destSvg, deOptions);
-				deSvg.encode();
+						//Generate svg-data stylesheet
+						const deSvg = new DirectoryEncoder(iconPaths.colorfy, iconPaths.destSvg, deOptions);
+						deSvg.encode();
 
-				gulp.src(path.join(iconPaths.colorfy, '*.svg'))
-					.pipe(raster())
-					.pipe(rename({ extname: '.png' }))
-					.pipe(imagemin())
-					.pipe(gulp.dest(iconPaths.png))
-					.on('finish', () => {
-						//Generate png-data stylesheet
-						const dePngOptions = Object.assign({}, deOptions, {
-							pngfolder: iconPaths.png,
-						});
-						const dePng = new DirectoryEncoder(iconPaths.png, iconPaths.destPng, dePngOptions);
-						dePng.encode();
+						gulp.src(path.join(iconPaths.colorfy, '*.svg'))
+							.pipe(raster())
+							.pipe(rename({ extname: '.png' }))
+							.pipe(imagemin())
+							.pipe(gulp.dest(iconPaths.png))
+							.on('finish', () => {
+								//Generate png-data stylesheet
+								const dePngOptions = Object.assign({}, deOptions, {
+									pngfolder: iconPaths.png,
+								});
+								const dePng = new DirectoryEncoder(iconPaths.png, iconPaths.destPng, dePngOptions);
+								dePng.encode();
 
-						//Generate png fallback stylesheet
-						const deFallbackOptions = Object.assign({}, dePngOptions, {
-							noencodepng: true,
-							pngpath: pngPath,
-						});
-						const deFallback = new DirectoryEncoder(iconPaths.png, iconPaths.destFallback, deFallbackOptions);
-						deFallback.encode();
+								//Generate png fallback stylesheet
+								const deFallbackOptions = Object.assign({}, dePngOptions, {
+									noencodepng: true,
+									pngpath: pngPath,
+								});
+								const deFallback = new DirectoryEncoder(iconPaths.png, iconPaths.destFallback, deFallbackOptions);
+								deFallback.encode();
 
-						done();
+								done();
+							});
 					});
+				} else {
+					gutil.log(gutil.colors.blue('[_icons] No icons found'));
+					done();
+				}
 			});
 		});
 });
