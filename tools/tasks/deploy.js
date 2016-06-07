@@ -6,10 +6,10 @@ const config = require('./../config');
 
 const appRepoDeploymentOptions = {
 	landing: {
-		branch: 'master', //use default remoteUrl, which is the current repo
+		branch: 'master', //use default remote (=origin), which is the current repo
 	},
 	notes: {
-		remoteUrl: 'https://github.com/hadimichael/notes.git', //use default branch, which is gh-pages
+		repo: 'https://github.com/hadimichael/notes.git', //use default branch, which is gh-pages
 	},
 };
 
