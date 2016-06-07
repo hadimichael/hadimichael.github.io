@@ -31,6 +31,8 @@ const ghPagesOptions = Object.assign(
 	appRepoDeploymentOptions[process.env.APP]
 );
 
+ghpages.clean(); //clean the cache
+
 gulp.task('deploy', ['dist'], () => {
 	return ghpages.publish(config.paths.dist, ghPagesOptions, (err) => {
 		if (!!err) {
