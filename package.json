@@ -14,7 +14,13 @@
     "node": ">=5.10.1"
   },
   "scripts": {
-    "start": "gulp serve"
+    "start": "npm run landing",
+    "landing": "APP=landing gulp serve",
+    "landing:dist": "APP=landing gulp dist",
+    "landing:deploy": "APP=landing gulp deploy",
+    "notes": "APP=notes gulp serve",
+    "notes:dist": "APP=notes gulp dist",
+    "notes:deploy": "APP=notes gulp deploy"
   },
   "devDependencies": {
     "ddbreakpoints": "^1.0.4",
