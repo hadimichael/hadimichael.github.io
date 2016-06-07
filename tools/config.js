@@ -1,4 +1,13 @@
 const path = require('path');
+const fs = require('fs');
+
+const source = path.join(__dirname, `../source/${process.env.APP}`);
+
+fs.access(source, fs.F_OK, (err) => {
+	if (!!err) {
+		throw new Error(`Expected a valid APP environment variable, got: ${process.env.APP}`);
+	}
+});
 
 //Project paths
 exports.paths = {
@@ -6,10 +15,10 @@ exports.paths = {
 	tools: path.join(__dirname),
 	tasks: path.join(__dirname, './tasks'),
 	assets: path.join(__dirname, '../assets'),
-	source: path.join(__dirname, '../source'),
 	tmp: path.join(__dirname, '../.tmp'),
 	devbuild: path.join(__dirname, '../.devbuild'),
 	dist: path.join(__dirname, '../.dist'),
+	source,
 };
 
 //rev-manifest filenames
