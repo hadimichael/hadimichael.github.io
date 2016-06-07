@@ -30,7 +30,7 @@ gulp.task('_styles', () => {
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer(autoprefixerOptions))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(config.paths.build))
+		.pipe(gulp.dest(config.paths.devbuild))
 		.pipe(connect.reload());
 });
 

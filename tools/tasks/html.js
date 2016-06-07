@@ -6,6 +6,7 @@ const htmlmin = require('gulp-htmlmin');
 const config = require('./../config');
 
 const files = path.join(config.paths.source, '**/*.html');
+
 const htmlminOptions = {
 	collapseBooleanAttributes: true,
 	collapseWhitespace: true,
@@ -20,7 +21,7 @@ const htmlminOptions = {
 gulp.task('_html', () => {
 	return gulp.src(files)
 		.pipe(htmlmin())
-		.pipe(gulp.dest(config.paths.build))
+		.pipe(gulp.dest(config.paths.devbuild))
 		.pipe(connect.reload());
 });
 

@@ -10,5 +10,5 @@ node_modules/
 
 # Application's temporary directories
 .tmp/
-.build/
+.devbuild/
 .dist/

@@ -8,7 +8,7 @@ const files = path.join(config.paths.assets, '**/*');
 
 gulp.task('_assets', () => {
 	return gulp.src(files)
-		.pipe(gulp.dest(config.paths.build))
+		.pipe(gulp.dest(config.paths.devbuild))
 		.pipe(connect.reload());
 });
 

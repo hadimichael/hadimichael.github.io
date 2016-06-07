@@ -8,7 +8,7 @@ gulp.task('_clean:tmp', () => {
 });
 
 gulp.task('_clean:build', () => {
-	return del.sync(config.paths.build);
+	return del.sync(config.paths.devbuild);
 });
 
 gulp.task('_clean:dist', () => {

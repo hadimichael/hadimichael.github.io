@@ -17,7 +17,7 @@ const customSelectors = require(iconSelectors);
 const pngPath = '/images/icons/png';
 
 function generateIconPaths(root) {
-	const iconPathsRoot = root || config.paths.build;
+	const iconPathsRoot = root || config.paths.devbuild;
 	return {
 		src: path.join(config.paths.source, 'images/icons/*.svg'),
 		min: path.join(config.paths.tmp, '_svg-min'),
@@ -29,7 +29,7 @@ function generateIconPaths(root) {
 	};
 }
 
-let iconPaths = generateIconPaths();
+let iconPaths = generateIconPaths(config.paths.devbuild);
 
 gulp.task('_icons:dist', (callback) => {
 	iconPaths = generateIconPaths(config.paths.tmp);

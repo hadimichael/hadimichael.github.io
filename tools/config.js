@@ -8,7 +8,7 @@ exports.paths = {
 	assets: path.join(__dirname, '../assets'),
 	source: path.join(__dirname, '../source'),
 	tmp: path.join(__dirname, '../.tmp'),
-	build: path.join(__dirname, '../.build'),
+	devbuild: path.join(__dirname, '../.devbuild'),
 	dist: path.join(__dirname, '../.dist'),
 };
 

@@ -5,7 +5,7 @@ const config = require('./../config');
 
 gulp.task('_server', () => {
 	return connect.server({
-		root: config.paths.build,
+		root: config.paths.devbuild,
 		livereload: true,
 	});
 });
