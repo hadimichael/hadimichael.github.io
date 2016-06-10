@@ -52,5 +52,8 @@
     "gulp-svgmin": "^1.2.2",
     "gulp-util": "^3.0.7",
     "run-sequence": "^1.2.1"
+  },
+  "dependencies": {
+    "normalize.css": "^4.1.1"
   }
 }
