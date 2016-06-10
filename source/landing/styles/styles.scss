@@ -5,11 +5,11 @@
 @import "variables";
 
 // Mixins
-@import "mixins";
+@import "../../_styles/mixins";
 
 // Vendor styles
-@import "vendor/animate";
-@import "vendor/brand-buttons";
+@import "../../_styles/vendor/animate";
+@import "../../_styles/vendor/brand-buttons";
 @import "../../../node_modules/ddbreakpoints/lib/dd.breakpoints";
 
 // Site styles
