@@ -9,6 +9,8 @@ fs.access(source, fs.F_OK, (err) => {
 	}
 });
 
+exports.isLanding = process.env.APP === 'landing';
+
 //Project paths
 exports.paths = {
 	root: path.join(__dirname, '../'),
