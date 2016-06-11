@@ -1,0 +1,26 @@
+/* ==========================================================================
+ * SPACES
+ * ========================================================================== */
+
+$spacing-unit-base: 14px;
+$spacing-half: $spacing-unit-base/2;
+$spacing: $spacing-unit-base;
+$spacing-2x: $spacing-unit-base*2;
+$spacing-3x: $spacing-unit-base*3;
+$spacing-4x: $spacing-unit-base*4;
+$spacing-5x: $spacing-unit-base*5;
+$spacing-6x: $spacing-unit-base*6;
+
+//avatar size
+$logo-size: 80px;
+$logo-size-s: 100px;
+$logo-size-m: 130px;
+
+//container widths
+$min-height: 300px;
+$min-width: 320px;
+$max-width: 768px;
+$bio-max-width: 400px;
+
+//list spacing
+$default-list-spacing: $spacing-half;

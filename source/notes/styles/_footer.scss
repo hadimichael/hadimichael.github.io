@@ -1,0 +1,20 @@
+/* =========================================== *\
+ * FOOTER
+\* =========================================== */
+
+.site-footer {
+	margin-top: $spacing-2x;
+	padding: $spacing 0;
+	border-top: 1px solid $color-border;
+	color: $color-text-muted;
+}
+
+.copyright {
+	text-align: center;
+
+	@include font-size(14);
+
+	p {
+		margin: $spacing-half 0 0 0;
+	}
+}

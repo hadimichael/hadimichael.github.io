@@ -1,0 +1,95 @@
+/* =========================================== *\
+ * HEADER
+\* =========================================== */
+
+.author {
+	margin: $spacing-half;
+	text-align: center;
+
+	@include bp(m) {
+		margin: $spacing;
+	}
+}
+
+.author-card,
+.author-bio {
+	vertical-align: middle;
+}
+
+.author-card {
+	@include bp(m) {
+		display: inline-block;
+	}
+
+	.avatar {
+		display: block;
+
+		img {
+			width: $logo-size;
+			height: $logo-size;
+			border-radius: 50%;
+
+			@include bp(s) {
+				width: $logo-size-s;
+				height: $logo-size-s;
+			}
+			@include bp(m) {
+				width: $logo-size-m;
+				height: $logo-size-m;
+			}
+		}
+	}
+}
+
+.author-bio {
+	padding: $spacing-half 0;
+
+	@include bp(m) {
+		display: inline-block;
+		margin-left: $spacing;
+		text-align: left;
+	}
+
+	.header-link {
+		color: $color-default-text;
+		text-decoration: none;
+
+		&:focus,
+		&:hover {
+			color: $link-color-hover;
+		}
+
+		&:active {
+			color: $link-color-active;
+		}
+	}
+
+	.bio {
+		max-width: $bio-max-width;
+		margin: auto;
+	}
+}
+
+.header-nav {
+	padding: $spacing 0;
+	border-top: 1px solid $color-border;
+
+	@include clearfix-micro();
+
+	.nav-home > li,
+	.nav-pages > li {
+		margin-right: $spacing-half;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.nav-home {
+		float: left;
+	}
+
+	.nav-pages {
+		float: right;
+	}
+}

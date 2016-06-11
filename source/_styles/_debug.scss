@@ -1,0 +1,44 @@
+@import "../../node_modules/ddbreakpoints/lib/dd.breakpoints.scss";
+
+body:after {
+	color: #F07D1E;
+	background-color: #000;
+	opacity: 0.7;
+	font-size: 14px;
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 9999999;
+	padding: 0 5px;
+	font-family: monospace;
+	content: "none";
+
+	@include bp(xxs) {
+		content: "xxsmall";
+	}
+
+	@include bp(xs) {
+		content: "xsmall";
+	}
+
+	@include bp(s) {
+		content: "small";
+	}
+
+	@include bp(m) {
+		content: "medium";
+	}
+
+	@include bp(l) {
+		content: "large";
+	}
+
+	@include bp(xl) {
+		content: "xlarge";
+	}
+
+	@include bp(xxl) {
+		content: "xxlarge";
+	}
+}

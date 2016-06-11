@@ -2,15 +2,26 @@
  * MAIN STYLESHEET
 \* =========================================== */
 
-@import "variables";
+// Variables
+@import "variables/colors";
+@import "variables/spaces";
+@import "variables/typography";
 
 // Mixins
+@import "../../_styles/debug";
 @import "../../_styles/mixins";
 
 // Vendor styles
 @import "../../../node_modules/normalize.css/normalize.css";
 @import "../../../node_modules/ddbreakpoints/lib/dd.breakpoints";
 
+// Site utilities
+@import "utilities/fonts";
+@import "utilities/typography";
+@import "utilities/lists";
+
 // Site styles
 @import "base";
-@import "typography";
+@import "header";
+@import "content";
+@import "footer";

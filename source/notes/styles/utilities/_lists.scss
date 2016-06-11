@@ -1,0 +1,67 @@
+/* =========================================== *\
+ * LISTS
+\* =========================================== */
+
+li {
+	margin-top: $spacing-half;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	li:first-child {
+		margin-top: $spacing-half;
+	}
+}
+
+ul,
+ol {
+	padding-left: 28px;
+
+	ul,
+	ol {
+		margin-bottom: 0;
+	}
+}
+
+dl {
+	dt {
+		margin-top: $spacing-half;
+		color: $heading-color;
+
+		@include font-base-bold();
+	}
+
+	dd {
+		margin-left: 0;
+	}
+}
+
+// HORIZONTAL LISTS
+ul.horizontal {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	@include clearfix-micro();
+
+	& > li {
+		float: left;
+		margin-top: 0;
+
+		@include clearfix-micro();
+	}
+}
+
+// DEAD LISTS
+.deadList {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	> li,
+	> li:first-child {
+		margin: 0;
+		padding: 0;
+	}
+}

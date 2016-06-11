@@ -1,0 +1,27 @@
+/* ==========================================================================
+ * COLOUR GUIDE
+ * ========================================================================== */
+
+$color-brand-primary: #077;
+$color-brand-secondary: #323232;
+$color-default-text: #333;
+$color-text-muted: #555;
+$color-inverted: #fff;
+$color-border: #000;
+
+//links
+$link-color-default: $color-brand-primary;
+$link-color-visited: $color-brand-primary;
+$link-color-hover: darken($color-brand-primary, 10);
+$link-color-active: darken($color-brand-primary, 20);
+
+//button
+$btn-color-default: $color-default-text;
+$btn-color-bg-default: transparent;
+$btn-color-border-default: $color-default-text;
+$btn-color-hover: $color-inverted;
+$btn-color-bg-hover: $color-brand-primary;
+$btn-color-border-hover: $btn-color-bg-hover;
+$btn-color-active: $color-inverted;
+$btn-color-bg-active: darken($color-brand-primary, 10);
+$btn-color-border-active: $btn-color-bg-active;

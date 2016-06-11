@@ -1,0 +1,55 @@
+/* =========================================== *\
+ * CONTENT
+\* =========================================== */
+
+.website-content {
+	min-height: $min-height;
+}
+
+.pagination {
+	margin-top: $spacing-2x;
+
+	@include clearfix-micro();
+
+	.post-prev {
+		float: left;
+	}
+
+	.post-next {
+		float: right;
+	}
+}
+
+.posts {
+	margin: 0 0 $spacing-2x $spacing-half;
+
+	li {
+		padding-top: $spacing;
+
+		@include bp(m) {
+			padding-top: $spacing-half;
+		}
+
+		time {
+			display: inline-block;
+			min-width: $spacing-4x;
+		}
+
+		.permalink {
+			margin-left: 3px;
+		}
+	}
+}
+
+.post {
+	.title {
+		margin: $spacing-half 0 0 0;
+	}
+
+	.publisher {
+		margin: $spacing-half 0 $spacing-2x 0;
+		color: $color-text-muted;
+
+		@include font-size(14);
+	}
+}

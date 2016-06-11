@@ -1,0 +1,113 @@
+/* ==========================================================================
+ * TYPOGRAPHY
+ * ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $heading-color;
+
+	@include font-base-bold();
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+h1 {
+	margin: $h1-margin;
+
+	@include font-size($h1-font-size, $h1-line-height);
+}
+
+h2 {
+	margin: $h2-margin;
+
+	@include font-size($h2-font-size, $h2-line-height);
+}
+
+h3 {
+	margin: $h3-margin;
+
+	@include font-size($h3-font-size, $h3-line-height);
+}
+
+h4 {
+	margin: $h4-margin;
+
+	@include font-size($h4-font-size, $h4-line-height);
+}
+
+h5 {
+	margin: $h5-margin;
+
+	@include font-size($h5-font-size, $h5-line-height);
+}
+
+h6 {
+	margin: $h6-margin;
+
+	@include font-size($h6-font-size, $h6-line-height);
+}
+
+p,
+pre,
+dl,
+menu,
+ol,
+ul {
+	margin: $paragraph-margin;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+strong,
+b {
+	@include font-base-bold();
+}
+
+a {
+	color: $link-color-default;
+	text-decoration: underline;
+
+	transition-duration: 200ms;
+	transition-property: color, background-color, border-color;
+
+	&:focus,
+	&:hover {
+		color: $link-color-hover;
+	}
+
+	&:active {
+		color: $link-color-active;
+	}
+
+	&.btn {
+		display: block;
+		padding: $spacing-half;
+		border: 1px solid $btn-color-border-default;
+		border-radius: 5px;
+		color: $btn-color-default;
+		background-color: $btn-color-bg-default;
+		text-decoration: none;
+
+		&.active,
+		&:focus,
+		&:hover {
+			border-color: $btn-color-border-hover;
+			color: $btn-color-hover;
+			background-color: $btn-color-bg-hover;
+		}
+
+		&:active {
+			border-color: $btn-color-border-active;
+			color: $btn-color-active;
+			background-color: $btn-color-bg-active;
+		}
+	}
+}

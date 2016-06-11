@@ -67,13 +67,10 @@
 	<!-- RSS feed -->
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.base_url}}/feed.xml">
 
-	<!-- Font -->
-	<link href="//fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet" type="text/css">
-
 	<!-- Styles -->
-	<!-- <link href="{{ assets('css/style.css') }}" rel="stylesheet" />
-	<link href="//localhost:8080/styles/styles.css" rel="stylesheet" /> -->
-	<link href="//hadi.io/notes/styles/styles.css" rel="stylesheet" />
+  	<!-- <link href="{{ assets('css/style.css') }}" rel="stylesheet" />
+  	<link href="//localhost:8080/styles/styles.css" rel="stylesheet" /> -->
+  	<link href="//hadi.io/notes/styles/styles-c578f9e4ea.css" rel="stylesheet" />
 </head>
 <body>
 {% if is_login %}
@@ -82,24 +79,24 @@
 <div class="wrapper">
 
 	<header class="site-header">
-		<div class="author-card">
-			<div class="avatar">
-				<a href="/"><img src="{{ site.avatar }}" alt="{{ site.author }}'s avatar" /></a>
-			</div>
-		</div>
-		<div class="header-name">
-			<h1><a href="/" class="header-link">{{ site.author }}</a></h1>
-			<p class="bio">{{ site.bio }} </p>
-		</div>
+	    <div class="author">
+	        <div class="author-card">
+    			<a href="/" class="avatar"><img src="{{ site.avatar }}" alt="{{ site.author }}'s avatar" /></a>
+    		</div>
+    		<div class="author-bio">
+    			<h1><a href="/" class="header-link">{{ site.author }}</a></h1>
+    			<p class="bio">{{ site.bio }} </p>
+    		</div>
+	    </div>
 		<div class="header-nav">
 			<nav role="navigation">
-				<ul class="nav nav-home">
-					<li><a href="/">Home</a></li>
+				<ul class="nav-home horizontal">
+					{% if not is_home %}<li><a href="/" class="btn">All notes</a></li>{% endif %}
 				</ul>
-				<ul class="nav nav-pages">
+				<ul class="nav-pages horizontal">
 					{% if pages %}
 					{% for page in pages %}
-					<li><a href="{{ page.url }}" class="{{ set_active(page.url) }}">{{ page.title }}</a></li>
+					<li><a href="{{ page.url }}" class="{{ set_active(page.url) }} btn">{{ page.title }}</a></li>
 					{% endfor %}
 					{% endif %}
 				</ul>
@@ -113,7 +110,7 @@
 
 			{% if is_tag %}
 			<header>
-				<h2 class="title">Showing all posts tagged #{{ tag }}:</h2>
+				<h2 class="title">Showing all notes tagged #{{ tag }}:</h2>
 			</header>
 			{% endif %}
 
@@ -124,48 +121,34 @@
 				<h2 class="title">{{ year }}</h2>
 			</header>
 			{% endif %}
-			<ul class="posts">
+			<ul class="posts deadList">
 				{% for post in items %}
 				<li>
 					<article itemscope itemtype="http://schema.org/Article">
 						<time datetime="{{ post.created_at }}">{{ post.created_at.strftime('%d %b') }}</time> &rsaquo; <a href="{{ post.url }}" class="permalink">{{ post.title }}</a>
-						<div class="post-tags hidden-phone">
-							{{- post.tags|format_tags(humanize=True) -}}
-						</div>
 					</article>
 				</li>
 				{% endfor %}
 			</ul>
 			{% endfor %}
 			<div class="pagination">
-				{% if pagination.prev %}<a href="{{ pagination.prev }}" class="post-prev">&larr; View Previous Posts</a>{% endif %}
-				{% if pagination.next %}<a href="{{ pagination.next }}" class="post-next">View More Posts &rarr;</a>{% endif %}
+				{% if pagination.prev %}<a href="{{ pagination.prev }}" class="post-prev">&larr; View Previous</a>{% endif %}
+				{% if pagination.next %}<a href="{{ pagination.next }}" class="post-next">View More &rarr;</a>{% endif %}
 			</div>
 			{% else %}
 			<h2 class="title"><em>No posts yet :(</em></h2>
+			<p><a href="/">View all posts</a></p>
 			{% endif %}
 
 			{% elif post.type == 'post' %}
 
 			<article itemscope itemtype="http://schema.org/Article" class="post">
-				<section class="content">
-					<h1>{{ post.title }}</h1>
+			    <section class="content">
+					<h1 class="title">{{ post.title }}</h1>
+					<p class="publisher">Published on <time class="time" datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time>{% if post.tags %} in {{ post.tags|format_tags(humanize=False) }}{% endif %}</p>
 
 					<div class="post-content" data-type-cleanup="true">
 						{{ post.content }}
-					</div>
-
-					{{ theme.social.bar }}
-
-					<div class="footer" class="muted">
-						<p class="publisher muted">Published by {{ site.author }} on <time class="time" datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time></p>
-						{% if post.tags %}
-						<ul class="post-tags">
-							{% for tag in post.tags %}
-							<li><a href="/tag/{{ tag }}"><i class="icon-tags"></i> {{ tag|format_tag(humanize=True) }}</a></li>
-							{% endfor %}
-						</ul>
-						{% endif %}
 					</div>
 				</section>
 
@@ -242,7 +225,7 @@
 	<footer class="site-footer">
 		<div class="copyright">
 			<p>All rights Reserved &copy; <a href="https://hadi.io">{{ site.author }}</a></p>
-			<p>Powered by <a href="http://postach.io" target="_blank">Postach.io</a></p>
+			<p>Powered by <a href="https://www.evernote.com" target="_blank">Evernote</a> and <a href="http://www.postach.io" target="_blank">Postach.io</a></p>
 		</div>
 	</footer>
 </div>

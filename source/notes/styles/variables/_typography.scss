@@ -1,0 +1,32 @@
+/* ==========================================================================
+ * TYPOGRAPHY
+ * ========================================================================== */
+
+$FONT_BASE: 16;
+
+//default body text (paragraphs, lists, etc)
+$base-font-size: $FONT_BASE;
+$base-line-height: 18;
+$paragraph-font-size: $base-font-size;
+$paragraph-line-height: $base-line-height;
+$paragraph-color: $color-default-text;
+$paragraph-margin: $spacing 0;
+$heading-color: $color-default-text;
+$h1-font-size: 28;
+$h1-line-height: 34;
+$h1-margin: $spacing-3x 0 $spacing 0;
+$h2-font-size: 24;
+$h2-line-height: 30;
+$h2-margin: $spacing-3x 0 $spacing 0;
+$h3-font-size: 22;
+$h3-line-height: 26;
+$h3-margin: $spacing-3x 0 $spacing 0;
+$h4-font-size: 20;
+$h4-line-height: 24;
+$h4-margin: $spacing-3x 0 $spacing 0;
+$h5-font-size: 18;
+$h5-line-height: 22;
+$h5-margin: $spacing-3x 0 $spacing 0;
+$h6-font-size: 16;
+$h6-line-height: 20;
+$h6-margin: $spacing-3x 0 $spacing 0;
