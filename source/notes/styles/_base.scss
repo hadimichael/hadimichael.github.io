@@ -17,7 +17,7 @@ html {
 
 body {
 	min-width: $min-width;
-
+	background: $color-background;
 	@include font-size($paragraph-font-size, $paragraph-line-height);
 }
 
