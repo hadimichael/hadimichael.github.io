@@ -20,7 +20,7 @@ const htmlminOptions = {
 	useShortDoctype: true,
 };
 
-gulp.task('_html', ['_favicons'], () => {
+gulp.task('_html', () => {
 	return gulp.src(files)
 		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(config.FAVICON_DATA_FILE)).favicon.html_code))
 		.pipe(htmlmin())
@@ -28,7 +28,7 @@ gulp.task('_html', ['_favicons'], () => {
 		.pipe(connect.reload());
 });
 
-gulp.task('_html:dist', ['_favicons'], () => {
+gulp.task('_html:dist', () => {
 	return gulp.src(files)
 		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(config.FAVICON_DATA_FILE)).favicon.html_code))
 		.pipe(htmlmin(htmlminOptions))

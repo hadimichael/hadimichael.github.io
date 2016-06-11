@@ -21,6 +21,7 @@ gulp.task('clean', ['_clean:assets', '_clean:tmp', '_clean:build', '_clean:dist'
 gulp.task('build:dev', (callback) => {
 	runSequence(
 		'clean',
+		'_favicons',
 		['_icons', '_images', '_styles', '_html'],
 		'_assets',
 		callback);
@@ -36,8 +37,8 @@ gulp.task('serve', ['build:dev'], (callback) => {
 gulp.task('build:dist', (callback) => {
 	runSequence(
 		'clean',
-		['_icons:dist', '_images:dist', '_styles:dist'],
-		'_rev',
+		['_icons:dist', '_images:dist', '_styles:dist', '_favicons'],
+		['_rev'],
 		'_html:dist',
 		'_assets:dist',
 		callback);
