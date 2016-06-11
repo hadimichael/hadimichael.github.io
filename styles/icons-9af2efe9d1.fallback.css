@@ -1,4 +1,4 @@
-/* AUTO-GENERATED on Sun May 29 2016 10:20:25 GMT+1000 (AEST)*/
+/* AUTO-GENERATED on Sat Jun 11 2016 14:16:10 GMT+1000 (AEST)*/
 /* Source at tools/icons */
 
 .btn-blog:after,
@@ -65,17 +65,17 @@ background-size: 14px 13px;
 }
 
 
-.btn-stackoverflow:before,
-.icon-stackoverflow-stackoverflow {
-background-image: url('/images/icons/png/stackoverflow-stackoverflow-354849c8a9.png');
+.btn-slideshare:before,
+.icon-slideshare-slideshare {
+background-image: url('/images/icons/png/slideshare-slideshare-9e0af05d4d.png');
 background-repeat: no-repeat;
 background-size: 16px 16px;
 }
 
 
-.btn-stackoverflow:after,
-.icon-stackoverflow-white {
-background-image: url('/images/icons/png/stackoverflow-white-0a428c9a08.png');
+.btn-slideshare:after,
+.icon-slideshare-white {
+background-image: url('/images/icons/png/slideshare-white-4c2beb9648.png');
 background-repeat: no-repeat;
 background-size: 16px 16px;
 }

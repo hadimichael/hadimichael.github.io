@@ -1,4 +1,4 @@
-/* AUTO-GENERATED on Sun May 29 2016 10:20:25 GMT+1000 (AEST)*/
+/* AUTO-GENERATED on Sat Jun 11 2016 14:16:10 GMT+1000 (AEST)*/
 /* Source at tools/icons */
 
 .btn-blog:after,
@@ -65,17 +65,17 @@ background-size: 14px 13px;
 }
 
 
-.btn-stackoverflow:before,
-.icon-stackoverflow-stackoverflow {
-background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAz1BMVEUAAAD//wD/fwD/fz//fyr/fz/+jTjpfz/uiDPwhzzxhjXyfzP1hDjsfzbtgzTxhjXyhTbwgjfwhDPxgTfxhDbvhTbvgzbwhDXwgzXvgjTvgjbwhTfwhDfwhDTxgjfxgzbwgzXwhDXxgzXwhDTwgzbwhDXxhDbwhDXwgzTxhDXxgzXxhDbwgjbvgjbxgzbxhDXvhDbvhDXxhDbxgjbxhDTxgjbxhDTvhDTxhDXxgzbvhDbvgjbxhDbxhDTxgjbxhDbvgjbvhDbvgjbvgjTxhDbnUXc9AAAARHRSTlMAAQIEBggJDA8RExQbHB0mKjM2NzhBQkdIUlRYZmpvdHh7gImMjpKeoaanqK62uL/FyMrLzM/Q1uDh5+zv8fT1+Pn6/LKv5AUAAACFSURBVBgZXcEFDsIAAATBw93d3V2L6/7/TRRKSMOMLIn7JCi7zJF9UnbRBY+KQ1+hTdnj7sLAJ0sNDnV/6YIR14ertIVzK2twTcvkdcqRn8F9sFp7ZGqcps1cIDWGZ0xvfd6MXmc5kiVSbM9vmAqSQB/uZHW4C4NA/AgE4kcgkA2IP+LPC43tIiIQC/CEAAAAAElFTkSuQmCC');
+.btn-slideshare:before,
+.icon-slideshare-slideshare {
+background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAhFBMVEUAAAAA//8AqqoAf38AmZkAf38AkZETiYkPj48Qi4sPi4sNi4sPh4cPiYkOh4cPiIgPiIgOiIgOiIgPiIgPiYkPiYkOiYkOiIgOiYkPiYkPiIgNiYkOh4cPiYkPiYkPh4cPiYkNiYkNh4cNiYkOh4cPiYkPh4cPh4cPiYkPh4cPh4cPiYnWoeOhAAAAK3RSTlMAAQMEBQYHDRAfITdCYml0dnh7hYaHi4yNkZLh5ebo6ezz9PX29/j6+/z+kErZZAAAAHdJREFUGBldwccBgkAAAME9c86KASMIp9t/f8JLcQalSWlSfgRQvo4xQakFKiGaoVQO5R5op+UGBUL0CcyKESjQu3ruMrhtAAVW93G2YH/pAwrDfM7yMYlTKsrxnXboXjy1qGh4mUOI5tSUpNgCu3xNTWnyD/75AJdXELtLMe8CAAAAAElFTkSuQmCC');
 background-repeat: no-repeat;
 background-size: 16px 16px;
 }
 
 
-.btn-stackoverflow:after,
-.icon-stackoverflow-white {
-background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAA20lEQVQYGYXBvyvEARzG8eek65SS2LAarOpYWZhluL/AYLEYlMWqZPAHKMsxGWUzKaGYvjOTRUlRTp7P20fnx1fdda+Xyph2yycxom5izo/g+6irm5jwBfg9VqnoP0Z9wwo1qt4jucmgymKd5Ac2GIqGX8BFTOkP/dHwLcnP3o55F+DXmFVbDNAnUYlFn5HcctNXXFNTW2z6yadsxQLDMeNjkj9iUj98wC8X3veuL32kshiPZe/43G98iyV9IamEatRjzYe+izGSSBIdSCSRJDqQSCKpC5LoQfTwCU7JJaVB5gLGAAAAAElFTkSuQmCC');
+.btn-slideshare:after,
+.icon-slideshare-white {
+background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAOpJREFUOI2tkzFOA0EMRb1EhAqJGyBOQc9R6OgRQqKnIoLkhhSggOggCWF5zzSTKFp2I7TB5Xz72f4zE1kiesZe38KdAZlZ9QYAE/ULuIttHqy6NM+AOjMTmHVOAIzVJTBqSIOIeFXriBi3TtDostjU1AvgUz1ZJf8CqAfASwE8Z+aw5B4Bb8DtZrc2wA3wrp4CM/WqrDUCpuphJ0A9BubqZdGvgQ/1DKjV86arawAwAQSeMnO/6ENgWtZ5zMxBK6AY910S5x2GzqMR62usqioj4kFdRsS45XwREfdNwNaH9JeodimO+Iff+AMn2jQpGSc/dwAAAABJRU5ErkJggg==');
 background-repeat: no-repeat;
 background-size: 16px 16px;
 }

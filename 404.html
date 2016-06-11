@@ -3,8 +3,7 @@
         color: #333;
         background: #fafafa;
         font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }</style><!-- I want to redirect you as soon as possible, but I also want to track analytics! --><script src=//www.google-analytics.com/analytics.js></script><!-- Custom URL Shortener --><script>ga('create','UA-50282790-1');
-
+      }</style><!-- I want to redirect you as soon as possible, but I also want to track analytics! --><script src=//www.google-analytics.com/analytics.js></script><!-- Custom URL Shortener --><script>window.ga = window.ga || function() {};
       //Custom url shortener
       (function() {
         'use strict';
@@ -15,10 +14,10 @@
         },
         destination = shortUrls[document.location.pathname.substring(1)];
 
-        if (!!destination) { 
+        if (!!destination) {
           document.write('Hang tight... I\'m redirecting you to <a href="' + destination + '">' + destination + '</a>'); //eww!!! document.write() is yucky!
           ga('send', 'event', '404', 'redirect', destination);
-          window.location = destination; 
+          window.location = destination;
         } else {
           ga('send', 'pageview', {
             page: '/404.html',
