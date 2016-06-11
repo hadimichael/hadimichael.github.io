@@ -20,9 +20,13 @@ const htmlminOptions = {
 	useShortDoctype: true,
 };
 
+const realFaviconOptions = {
+	keep: 'meta[property="og:image"]',
+};
+
 gulp.task('_html', () => {
 	return gulp.src(files)
-		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(config.FAVICON_DATA_FILE)).favicon.html_code))
+		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(config.FAVICON_DATA_FILE)).favicon.html_code, realFaviconOptions))
 		.pipe(htmlmin())
 		.pipe(gulp.dest(config.paths.devbuild))
 		.pipe(connect.reload());
@@ -30,7 +34,7 @@ gulp.task('_html', () => {
 
 gulp.task('_html:dist', () => {
 	return gulp.src(files)
-		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(config.FAVICON_DATA_FILE)).favicon.html_code))
+		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(config.FAVICON_DATA_FILE)).favicon.html_code, realFaviconOptions))
 		.pipe(htmlmin(htmlminOptions))
 		.pipe(gulp.dest(config.paths.dist));
 });
