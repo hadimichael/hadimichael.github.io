@@ -14,6 +14,6 @@ module.exports = {
 	'github-white': ['.btn-github:after'],
 	'github-github': ['.btn-github:before'],
 
-	'stackoverflow-white': ['.btn-stackoverflow:after'],
-	'stackoverflow-stackoverflow': ['.btn-stackoverflow:before'],
+	'slideshare-white': ['.btn-slideshare:after'],
+	'slideshare-slideshare': ['.btn-slideshare:before'],
 };

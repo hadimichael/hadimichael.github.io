@@ -56,7 +56,7 @@ gulp.task('_icons', (done) => {
 								wordpress: '#464646',
 								linkedin: '#0083a8',
 								github: '#171515',
-								stackoverflow: '#f18436',
+								slideshare: '#0f8989',
 							},
 						}
 					);
