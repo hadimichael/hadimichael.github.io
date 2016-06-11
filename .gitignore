@@ -14,3 +14,6 @@ npm-debug.log
 .devbuild/
 .dist/
 .assets/
+
+# Real favicon Generator file
+faviconData.json
