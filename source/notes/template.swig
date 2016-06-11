@@ -81,7 +81,7 @@
 	<header class="site-header">
 	    <div class="author">
 	        <div class="author-card">
-    			<a href="/" class="avatar"><img src="{{ site.avatar }}" alt="{{ site.author }}'s avatar" /></a>
+    			<a href="https://hadi.io" class="avatar"><img src="{{ site.avatar }}" alt="{{ site.author }}'s avatar" /></a>
     		</div>
     		<div class="author-bio">
     			<h1>{{ site.author }}</h1>
