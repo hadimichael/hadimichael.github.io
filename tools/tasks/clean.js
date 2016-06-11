@@ -3,6 +3,10 @@ const del = require('del');
 
 const config = require('./../config');
 
+gulp.task('_clean:assets', () => {
+	return del.sync(config.paths.assets);
+});
+
 gulp.task('_clean:tmp', () => {
 	return del.sync(config.paths.tmp);
 });
