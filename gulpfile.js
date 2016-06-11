@@ -18,7 +18,7 @@ fs.readdirSync(config.paths.tasks).map((fileName) => {
 //primary tasks
 gulp.task('clean', ['_clean:assets', '_clean:tmp', '_clean:build', '_clean:dist']);
 
-gulp.task('devbuild', (callback) => {
+gulp.task('build:dev', (callback) => {
 	runSequence(
 		'clean',
 		['_icons', '_images', '_styles', '_html'],
@@ -26,7 +26,7 @@ gulp.task('devbuild', (callback) => {
 		callback);
 });
 
-gulp.task('serve', ['devbuild'], (callback) => {
+gulp.task('serve', ['build:dev'], (callback) => {
 	runSequence(
 		'_server',
 		['_images:watch', '_styles:watch', '_html:watch', '_assets:watch'],
