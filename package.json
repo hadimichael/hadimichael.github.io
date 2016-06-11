@@ -15,8 +15,8 @@
   },
   "scripts": {
     "start": "npm run landing",
-		"clean": "rm -rf .devbuild && rm -rf .tmp && rm -rf .dist",
-		"install:clean": "rm -rf node_modules && npm install",
+    "clean": "rm -rf .devbuild && rm -rf .tmp && rm -rf .dist",
+    "install:clean": "rm -rf node_modules && npm install",
     "landing": "APP=landing gulp serve",
     "landing:dist": "APP=landing gulp dist",
     "landing:deploy": "APP=landing gulp deploy",
@@ -53,7 +53,5 @@
     "gulp-util": "^3.0.7",
     "run-sequence": "^1.2.1"
   },
-  "dependencies": {
-    "normalize.css": "^4.1.1"
-  }
+  "dependencies": {}
 }
