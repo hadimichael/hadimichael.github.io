@@ -18,6 +18,7 @@ html {
 body {
 	min-width: $min-width;
 	background: $color-background;
+
 	@include font-size($paragraph-font-size, $paragraph-line-height);
 }
 
@@ -25,4 +26,8 @@ body {
 	overflow-x: hidden;
 	max-width: $max-width;
 	margin: auto;
+
+	@include bp(l) {
+		max-width: $max-width-l;
+	}
 }
