@@ -84,7 +84,7 @@
     			<a href="/" class="avatar"><img src="{{ site.avatar }}" alt="{{ site.author }}'s avatar" /></a>
     		</div>
     		<div class="author-bio">
-    			<h1><a href="/" class="header-link">{{ site.author }}</a></h1>
+    			<h1>{{ site.author }}</h1>
     			<p class="bio">{{ site.bio }} </p>
     		</div>
 	    </div>
