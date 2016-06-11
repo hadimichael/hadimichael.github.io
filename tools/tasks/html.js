@@ -2,6 +2,8 @@ const path = require('path');
 const gulp = require('gulp');
 const connect = require('gulp-connect');
 const htmlmin = require('gulp-htmlmin');
+const realFavicon = require('gulp-real-favicon');
+const fs = require('fs');
 
 const config = require('./../config');
 
@@ -18,15 +20,17 @@ const htmlminOptions = {
 	useShortDoctype: true,
 };
 
-gulp.task('_html', () => {
+gulp.task('_html', ['_favicons'], () => {
 	return gulp.src(files)
+		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(config.FAVICON_DATA_FILE)).favicon.html_code))
 		.pipe(htmlmin())
 		.pipe(gulp.dest(config.paths.devbuild))
 		.pipe(connect.reload());
 });
 
-gulp.task('_html:dist', () => {
+gulp.task('_html:dist', ['_favicons'], () => {
 	return gulp.src(files)
+		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(config.FAVICON_DATA_FILE)).favicon.html_code))
 		.pipe(htmlmin(htmlminOptions))
 		.pipe(gulp.dest(config.paths.dist));
 });

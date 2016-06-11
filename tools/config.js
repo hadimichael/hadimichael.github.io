@@ -16,7 +16,7 @@ const paths = {
 	root: path.join(__dirname, '../'),
 	tools: path.join(__dirname),
 	tasks: path.join(__dirname, './tasks'),
-	assets: path.join(__dirname, '../assets'),
+	assets: path.join(__dirname, '../.assets'),
 	images: path.join(__dirname, '../source/_images/'),
 	tmp: path.join(__dirname, '../.tmp'),
 	devbuild: path.join(__dirname, '../.devbuild'),
