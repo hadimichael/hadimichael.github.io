@@ -29,7 +29,6 @@
 	background-color: $instagram-color;
 }
 
-//wordpress
 .btn-blog {
 	border-color: $wordpress-color;
 	color: $wordpress-color;
@@ -69,15 +68,15 @@
 	background-color: $github-color;
 }
 
-.btn-stackoverflow {
-	border-color: $stackoverflow-color;
-	color: $stackoverflow-color;
+.btn-slideshare {
+	border-color: $slideshare-color;
+	color: $slideshare-color;
 	background-color: transparent;
 }
-.btn-stackoverflow:hover,
-.btn-stackoverflow:focus,
-.btn-stackoverflow:active,
-.btn-stackoverflow.active {
+.btn-slideshare:hover,
+.btn-slideshare:focus,
+.btn-slideshare:active,
+.btn-slideshare.active {
 	color: white;
-	background-color: $stackoverflow-color;
+	background-color: $slideshare-color;
 }
