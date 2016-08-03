@@ -70,7 +70,7 @@
 	<!-- Styles -->
   	<!-- <link href="{{ assets('css/style.css') }}" rel="stylesheet" />
   	<link href="//localhost:8080/styles/styles.css" rel="stylesheet" /> -->
-  	<link href="//hadi.io/notes/styles/styles-b493d6cb11.css" rel="stylesheet" />
+  	<link href="//hadi.io/notes/styles/styles-f50ce14078.css" rel="stylesheet" />
 </head>
 <body>
 {% if is_login %}
