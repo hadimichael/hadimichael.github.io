@@ -13,4 +13,7 @@ module.exports = {
 
 	'slideshare-white': ['.btn-slideshare:after'],
 	'slideshare-slideshare': ['.btn-slideshare:before'],
+
+	'keybase-white': ['.btn-keybase:after'],
+	'keybase-keybase': ['.btn-keybase:before'],
 };

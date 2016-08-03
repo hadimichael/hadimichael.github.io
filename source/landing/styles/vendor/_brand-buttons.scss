@@ -67,3 +67,16 @@
 	color: white;
 	background-color: $slideshare-color;
 }
+
+.btn-keybase {
+	border-color: $keybase-color;
+	color: $keybase-color;
+	background-color: transparent;
+}
+.btn-keybase:hover,
+.btn-keybase:focus,
+.btn-keybase:active,
+.btn-keybase.active {
+	color: white;
+	background-color: $keybase-color;
+}

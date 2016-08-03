@@ -48,7 +48,8 @@
 .btn-blog,
 .btn-linkedin,
 .btn-github,
-.btn-slideshare {
+.btn-slideshare,
+.btn-keybase {
 	@include peicon-dual(16px, 16px, 10px, center, true);
 
 	.lt-ie8 & {

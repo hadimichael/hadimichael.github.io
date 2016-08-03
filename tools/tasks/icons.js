@@ -56,6 +56,7 @@ gulp.task('_icons', (done) => {
 								linkedin: '#0083a8',
 								github: '#171515',
 								slideshare: '#0f8989',
+								keybase: '#ff5a00',
 							},
 						}
 					);
