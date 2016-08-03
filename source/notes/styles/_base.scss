@@ -22,6 +22,13 @@ body {
 	@include font-size($paragraph-font-size, $paragraph-line-height);
 }
 
+hr {
+	margin: $spacing-2x 0;
+	border-style: solid;
+	border-color: $color-text-muted;
+	border-bottom: none;
+}
+
 .wrapper {
 	overflow-x: hidden;
 	max-width: $max-width;
