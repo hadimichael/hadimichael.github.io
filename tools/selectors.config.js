@@ -2,9 +2,6 @@ module.exports = {
 	'twitter-white': ['.btn-twitter:after'],
 	'twitter-twitter': ['.btn-twitter:before'],
 
-	'instagram-white': ['.btn-instagram:after'],
-	'instagram-instagram': ['.btn-instagram:before'],
-
 	'blog-white': ['.btn-blog:after'],
 	'blog-wordpress': ['.btn-blog:before'],
 

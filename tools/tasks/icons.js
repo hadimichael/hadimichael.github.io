@@ -52,7 +52,6 @@ gulp.task('_icons', (done) => {
 							colors: {
 								white: '#ffffff',
 								twitter: '#46c0fb',
-								instagram: '#3f729b',
 								wordpress: '#464646',
 								linkedin: '#0083a8',
 								github: '#171515',
