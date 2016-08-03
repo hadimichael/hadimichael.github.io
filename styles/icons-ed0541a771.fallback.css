@@ -1,4 +1,4 @@
-/* AUTO-GENERATED on Fri Jul 22 2016 15:13:12 GMT+1000 (AEST)*/
+/* AUTO-GENERATED on Thu Aug 04 2016 09:10:57 GMT+1000 (AEST)*/
 /* Source at tools/icons */
 
 .btn-blog:after,
@@ -33,19 +33,19 @@ background-size: 16px 16px;
 }
 
 
-.btn-instagram:before,
-.icon-instagram-instagram {
-background-image: url('/images/icons/png/instagram-instagram-2873840bff.png');
+.btn-keybase:before,
+.icon-keybase-keybase {
+background-image: url('/images/icons/png/keybase-keybase-46f277b729.png');
 background-repeat: no-repeat;
-background-size: 16px 16px;
+background-size: 16px 12px;
 }
 
 
-.btn-instagram:after,
-.icon-instagram-white {
-background-image: url('/images/icons/png/instagram-white-315a960753.png');
+.btn-keybase:after,
+.icon-keybase-white {
+background-image: url('/images/icons/png/keybase-white-98bbe61ae3.png');
 background-repeat: no-repeat;
-background-size: 16px 16px;
+background-size: 16px 12px;
 }
 
 
