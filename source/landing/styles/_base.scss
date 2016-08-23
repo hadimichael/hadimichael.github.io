@@ -23,6 +23,13 @@ body {
 	border-radius: 50%;
 }
 
+.greeting {
+	@include bp(xs,s) {
+		width: 70%;
+		margin: auto;
+	}
+}
+
 .on-the-web {
 	padding: 0;
 	list-style: none;
