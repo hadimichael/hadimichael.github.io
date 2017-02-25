@@ -6,7 +6,9 @@ $FONT_BASE: 16;
 
 //default body text (paragraphs, lists, etc)
 $base-font-size: $FONT_BASE;
-$base-line-height: 20;
+$base-line-height: 24;
+$bio-font-size: $base-font-size;
+$bio-line-height: 20;
 $paragraph-font-size: $base-font-size;
 $paragraph-line-height: $base-line-height;
 $paragraph-color: $color-default-text;

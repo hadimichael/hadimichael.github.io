@@ -53,6 +53,8 @@
 	.bio {
 		max-width: $bio-max-width;
 		margin: auto;
+
+		@include font-size($bio-font-size, $bio-line-height);
 	}
 }
 
