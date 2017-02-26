@@ -71,6 +71,10 @@ b {
 	@include font-base-bold();
 }
 
+blockquote {
+	font-style: italic;
+}
+
 a {
 	color: $link-color-default;
 	text-decoration: underline;
