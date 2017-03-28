@@ -60,7 +60,7 @@
 	<!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="{{ site.twitter }}">
-	<meta name="twitter:creator" content="@hadi_michael">
+	<meta name="twitter:creator" content="@hdmchl">
 
 	<link rel="canonical" href="{{site.base_url}}{{ post.permalink }}">
 
