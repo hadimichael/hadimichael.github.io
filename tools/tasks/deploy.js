@@ -9,7 +9,7 @@ const appRepoDeploymentOptions = {
 		branch: 'master', //use default remote (=origin), which is the current repo
 	},
 	notes: {
-		repo: 'https://github.com/hadimichael/notes.git', //use default branch, which is gh-pages
+		repo: 'https://github.com/hdmchl/notes.git', //use default branch, which is gh-pages
 	},
 };
 

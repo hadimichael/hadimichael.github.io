@@ -26,7 +26,7 @@ gulp.task('_favicons', (done) => {
 				pictureAspect: 'noChange',
 				themeColor: '#fafafa',
 				manifest: {
-					name: 'Hadi Michael',
+					name: 'Hadi Michel',
 					display: 'browser',
 					orientation: 'notSet',
 					onConflict: 'override',

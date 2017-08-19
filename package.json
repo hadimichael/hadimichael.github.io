@@ -1,14 +1,14 @@
 {
-  "name": "hadimichael.github.io",
+  "name": "hdmchl.github.io",
   "version": "2.0.0",
-  "description": "Landing page for Hadi Michael",
+  "description": "Landing page for Hadi Michel",
   "homepage": "https://hadi.io",
-  "author": "Hadi Michael <hadimichael@gmail.com> (https://hadi.io)",
+  "author": "Hadi Michel <hi@hadi.io> (https://hadi.io)",
   "license": "SEE LICENSE IN LICENSE",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/hadimichael/hadimichael.github.io.git"
+    "url": "https://github.com/hdmchl/hdmchl.github.io.git"
   },
   "engines": {
     "node": ">=5.10.1"
