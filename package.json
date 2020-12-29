@@ -18,9 +18,9 @@
     "clean": "rm -rf .devbuild && rm -rf .tmp && rm -rf .dist",
     "install:clean": "rm -rf node_modules && npm install",
     "landing": "APP=landing gulp serve",
-    "landing:deploy": "APP=landing gulp deploy",
+    "landing:publish": "APP=landing gulp publish",
     "notes": "APP=notes gulp serve",
-    "notes:deploy": "APP=notes gulp deploy"
+    "notes:publish": "APP=notes gulp publish"
   },
   "devDependencies": {
     "ddbreakpoints": "^1.1.3",
