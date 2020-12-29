@@ -42,20 +42,3 @@
 	.lt-ie8 & {
 		padding-left: 10px;
 	}
-}
-
-.btn-twitter,
-.btn-blog,
-.btn-linkedin,
-.btn-github,
-.btn-slideshare,
-.btn-keybase {
-	@include peicon-dual(16px, 16px, 10px, center, true);
-
-	.lt-ie8 & {
-		&:before,
-		&:after {
-			display: none;
-		}
-	}
-}
