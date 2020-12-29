@@ -33,7 +33,7 @@ const ghPagesOptions = Object.assign(
 
 ghpages.clean(); //clean the cache
 
-gulp.task('deploy', ['dist'], () => {
+gulp.task('deploy', () => {
 	return ghpages.publish(config.paths.dist, ghPagesOptions, (err) => {
 		if (!!err) {
 			gutil.log(gutil.colors.red('[deploy] Error deploying'), err);
