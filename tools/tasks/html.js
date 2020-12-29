@@ -40,5 +40,5 @@ gulp.task('_html:dist', () => {
 });
 
 gulp.task('_html:watch', () => {
-	return gulp.watch(files, ['_html']);
+	return gulp.watch(files, gulp.parallel('_html'));
 });

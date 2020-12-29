@@ -4,52 +4,38 @@ const path = require('path');
 
 //gulp modules
 const gulp = require('gulp');
-const revReplace = require('gulp-rev-replace');
-const runSequence = require('run-sequence');
 
 //project files
 const config = require('./tools/config');
 
-//load all our utility gulp tasks
+//load all our gulp tasks
 fs.readdirSync(config.paths.tasks).map((fileName) => {
 	return require(path.join(config.paths.tasks, fileName)); //eslint-disable-line global-require
 });
 
-//primary tasks
-gulp.task('clean', ['_clean:assets', '_clean:tmp', '_clean:build', '_clean:dist']);
+//first-level tasks
+const clean = exports.clean = gulp.parallel('_clean:assets', '_clean:tmp', '_clean:build', '_clean:dist');
 
-gulp.task('build:dev', (callback) => {
-	runSequence(
-		'clean',
-		'_favicons',
-		['_icons', '_images', '_styles', '_html'],
-		'_assets',
-		callback);
-});
+const buildDev = exports['build:dev'] = gulp.series(
+	clean,
+	'_favicons',
+	'_csscomb',
+	gulp.parallel('_images', '_styles', '_html'),
+	'_assets'
+);
 
-gulp.task('serve', ['build:dev'], (callback) => {
-	runSequence(
-		'_server',
-		['_images:watch', '_styles:watch', '_html:watch', '_assets:watch'],
-		callback);
-});
+const serve = exports.serve = gulp.series(
+	buildDev,
+	gulp.parallel('_images:watch', '_styles:watch', '_html:watch', '_assets:watch', '_server'),
+);
 
-gulp.task('build:dist', (callback) => {
-	runSequence(
-		'clean',
-		['_icons:dist', '_images:dist', '_styles:dist', '_favicons'],
-		['_rev'],
-		'_html:dist',
-		'_assets:dist',
-		callback);
-});
+const buildDist = exports['build:dist'] = gulp.series(
+	clean,
+	gulp.parallel('_images:dist', '_styles:dist', '_favicons'), 
+	'_rev',
+	'_html:dist',
+	'_assets:dist',
+	'_rev:dist'
+);
 
-gulp.task('dist', ['build:dist'], () => {
-	const manifest = gulp.src(path.join(config.paths.tmp, 'rev-manifest.json'));
-
-	return gulp.src(path.join(config.paths.dist, '**/*'))
-		.pipe(revReplace({ manifest }))
-		.pipe(gulp.dest(config.paths.dist));
-});
-
-gulp.task('default', ['serve']);
+exports.default = serve;

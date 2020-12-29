@@ -44,9 +44,7 @@ gulp.task('_favicons', (done) => {
 			errorOnImageTooSmall: false,
 		},
 		markupFile: config.FAVICON_DATA_FILE,
-	}, () => {
-		done();
-	});
+	}, done);
 });
 
 gulp.task('_check-for-favicon-update', (done) => {

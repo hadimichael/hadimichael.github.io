@@ -18,5 +18,5 @@ gulp.task('_images:dist', () => {
 });
 
 gulp.task('_images:watch', () => {
-	return gulp.watch(files, ['_images']);
+	return gulp.watch(files, gulp.parallel('_images'));
 });
