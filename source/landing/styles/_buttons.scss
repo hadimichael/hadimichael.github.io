@@ -6,14 +6,17 @@
 	position: relative;
 	display: block;
 	margin: 0;
-	padding: 10px 16px;
-	padding-left: 36px;
+	padding: 13px;
 	border-width: 1px;
 	border-style: solid;
 	border-radius: 6px;
 	text-decoration: none;
 	cursor: pointer;
 	vertical-align: middle;
+
+	@include bp(m) {
+		padding: 10px 15px;
+	}
 
 	user-select: none;
 	transition: background-color 250ms, color 250ms, border-color 250ms;
@@ -42,3 +45,4 @@
 	.lt-ie8 & {
 		padding-left: 10px;
 	}
+}

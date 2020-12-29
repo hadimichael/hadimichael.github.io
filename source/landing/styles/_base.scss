@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-	min-width: 230px;
+	min-width: 250px;
 
 	@include bp(xs) {
 		text-align: center;
@@ -18,8 +18,8 @@ body {
 }
 
 .display-pic img {
-	width: 180px;
-	height: 180px;
+	width: 190px;
+	height: 190px;
 	border-radius: 50%;
 }
 
@@ -67,6 +67,7 @@ body {
 		width: 460px;
 		margin-left: 25px;
 		text-align: left;
+		vertical-align: top;
 	}
 }
 
