@@ -24,5 +24,5 @@ gulp.task('_assets:dist', () => {
 });
 
 gulp.task('_assets:watch', () => {
-	return gulp.watch(files, ['_assets']);
+	return gulp.watch(files, gulp.parallel('_assets'));
 });

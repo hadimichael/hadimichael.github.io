@@ -12,7 +12,7 @@ const config = require('./../config');
 
 const files = path.join(config.paths.source, '**/*.{scss,css}');
 const autoprefixerOptions = {
-	browsers: ['> 1%', 'IE 7'],
+	overrideBrowserslist: ['> 1%', 'IE 7'],
 };
 
 gulp.task('_csscomb', () => {
@@ -43,5 +43,5 @@ gulp.task('_styles:dist', () => {
 });
 
 gulp.task('_styles:watch', () => {
-	return gulp.watch(files, ['_csscomb', '_styles']);
+	return gulp.watch(files, gulp.series('_styles')); //'_csscomb' removed
 });
