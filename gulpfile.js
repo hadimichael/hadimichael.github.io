@@ -38,4 +38,6 @@ const buildDist = exports['build:dist'] = gulp.series(
 	'_rev:dist'
 );
 
+const publish = exports.publish = gulp.series(buildDist, 'deploy');
+
 exports.default = serve;
