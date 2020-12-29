@@ -16,19 +16,6 @@
 	background-color: $twitter-color;
 }
 
-.btn-blog {
-	border-color: $wordpress-color;
-	color: $wordpress-color;
-	background-color: transparent;
-}
-.btn-blog:hover,
-.btn-blog:focus,
-.btn-blog:active,
-.btn-blog.active {
-	color: white;
-	background-color: $wordpress-color;
-}
-
 .btn-linkedin {
 	border-color: $linkedin-color;
 	color: $linkedin-color;
@@ -53,19 +40,6 @@
 .btn-github.active {
 	color: white;
 	background-color: $github-color;
-}
-
-.btn-slideshare {
-	border-color: $slideshare-color;
-	color: $slideshare-color;
-	background-color: transparent;
-}
-.btn-slideshare:hover,
-.btn-slideshare:focus,
-.btn-slideshare:active,
-.btn-slideshare.active {
-	color: white;
-	background-color: $slideshare-color;
 }
 
 .btn-keybase {
